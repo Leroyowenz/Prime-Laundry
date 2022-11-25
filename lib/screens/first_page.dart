@@ -15,7 +15,8 @@ class _FirstPageState extends State<FirstPage> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        title: textInfo("Settings", FontWeight.w500, Colors.black, 18),
+        title: textInfo(
+            "Settings", FontWeight.w500, Colors.black, 18, "Roboto-Regular"),
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -27,87 +28,100 @@ class _FirstPageState extends State<FirstPage> {
       body: Column(
         children: [
           const Center(
+            // Code for Circle Avatar
             child: CircleAvatar(
               radius: 50,
               backgroundImage: AssetImage("assets/images/settingsimage1.png"),
             ),
           ),
+
           const SizedBox(
             height: 10,
           ),
-          // Text("Uoc Nguyen"),
+
+          // Text for circle avatar
           textInfo("Uoc Nguyen", FontWeight.w500,
-              const Color.fromRGBO(56, 16, 106, 20), 16),
+              const Color.fromRGBO(56, 16, 106, 20), 16, "Roboto-Regular"),
           const SizedBox(
             height: 10,
           ),
           textInfo("Ha Noi, Viet Nam", FontWeight.w400,
-              const Color.fromRGBO(130, 133, 138, 20), 12),
-
+              const Color.fromRGBO(130, 133, 138, 20), 12, "Roboto-Regular"),
           const SizedBox(
             height: 15,
           ),
 
+          // Text for rectangle bar
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Padding(
                 padding: const EdgeInsets.only(
-                  left: 10,
+                  left: 15,
+                  right: 2,
                 ),
-                child: textInfo(" Gold member", FontWeight.w400,
-                    const Color.fromRGBO(130, 133, 138, 20), 13),
+                child: Image.asset("assets/images/settingsimage2.png"),
               ),
+              textInfo(
+                  " Gold member",
+                  FontWeight.w400,
+                  const Color.fromRGBO(130, 133, 138, 20),
+                  13,
+                  "Roboto-Regular"),
               Padding(
                 padding: const EdgeInsets.only(
-                  right: 10,
+                  left: 190,
                 ),
-                child: textInfo(" 10 points", FontWeight.normal,
-                    const Color.fromRGBO(130, 133, 138, 20), 13),
+                child: textInfo(
+                    " 10 points",
+                    FontWeight.normal,
+                    const Color.fromRGBO(130, 133, 138, 20),
+                    13,
+                    "Roboto-Regular"),
               ),
             ],
           ),
-
           const SizedBox(
             height: 10,
           ),
-          Image.asset("assets/images/Rectangle 41.png"),
 
-          Container(
-            color: Colors.grey,
-            // decoration:,
-            width: 200,
-            height: 200,
-            child: Column(
+          // Rectangle bar
+          Image.asset("assets/images/settingsimage3.png"),
+          const SizedBox(
+            height: 15,
+          ),
+
+          //Widget for settings box
+          const SettingsBox(),
+
+          // Text for Others
+          Padding(
+            padding: const EdgeInsets.only(left: 15),
+            child: Row(
               children: [
-                Row(
-                  children: [
-                    TextField(
-                      decoration: const InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: "label",
-                        labelStyle: TextStyle(color: Colors.black87),
-                      ),
-                    ),
-                  ],
-                ),
+                textInfo(
+                    "Others",
+                    FontWeight.w500,
+                    const Color.fromRGBO(56, 16, 106, 20),
+                    16,
+                    "Roboto-Regular"),
               ],
             ),
+          ),
+
+          // Second Rectangle bar
+          const SettingsBox2(),
+
+          // Logout Text
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              textInfo("Logout", FontWeight.w400,
+                  const Color.fromRGBO(44, 44, 44, 20), 12, "Roboto-Regular"),
+            ],
           ),
         ],
       ),
     );
   }
 }
-
-
-
-
-
-              // Center(
-              //   child: ClipRRect(
-              //       borderRadius: BorderRadius.circular(40),
-              //       child: Image.asset("assets/images/settingsimage1.png")),
-              // ),
-            
-           

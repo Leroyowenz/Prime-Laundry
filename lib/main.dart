@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:prime_laundry/screens/first_page.dart';
-import 'package:prime_laundry/screens/sign_in_page.dart';
 
 void main() {
   runApp(const MyApp());
