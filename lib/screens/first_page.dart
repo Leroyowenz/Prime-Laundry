@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-
 import '../utility/custom_widget.dart';
+import '../utility/settingsbox_widget.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -116,8 +116,12 @@ class _FirstPageState extends State<FirstPage> {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              textInfo("Logout", FontWeight.w400,
-                  const Color.fromRGBO(44, 44, 44, 20), 12, "Roboto-Regular"),
+              textInfo(
+                  "Logout",
+                  FontWeight.w400,
+                  const Color.fromRGBO(44, 44, 44, 20),
+                  12,
+                  "Roboto-Regular.ttf"),
             ],
           ),
         ],
