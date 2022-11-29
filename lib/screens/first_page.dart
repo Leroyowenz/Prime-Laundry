@@ -85,8 +85,26 @@ class _FirstPageState extends State<FirstPage> {
             height: 10,
           ),
 
-          // Rectangle bar
-          Image.asset("assets/images/settingsimage3.png"),
+          // Progress indicator bar
+          ClipRRect(
+            borderRadius: BorderRadius.circular(5),
+            child: Container(
+              color: const Color.fromARGB(235, 222, 181, 183),
+              width: 375,
+              height: 5,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 208.0),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(5),
+                  child: const LinearProgressIndicator(
+                    value: 7,
+                    color: Colors.red,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // Image.asset("assets/images/settingsimage3.png"),
           const SizedBox(
             height: 15,
           ),
