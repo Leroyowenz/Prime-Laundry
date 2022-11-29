@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:prime_laundry/screens/fourth_screen.dart';
 import 'package:prime_laundry/screens/third_screeen.dart';
 
 // First Settings Box
@@ -61,22 +62,30 @@ class SettingsBox extends StatelessWidget {
                 const Divider(
                   height: 20,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(left: 25),
-                      child: Text(
-                        "Change Password",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const FourthScreen())));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          "Change Password",
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        right: 25,
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          right: 25,
+                        ),
+                        child: Image.asset("assets/images/settingsimage6.png"),
                       ),
-                      child: Image.asset("assets/images/settingsimage6.png"),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ],
             ),
@@ -125,30 +134,30 @@ class SettingsBox2 extends StatelessWidget {
                 const Divider(
                   height: 15,
                 ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const Padding(
-                      padding: EdgeInsets.only(left: 25),
-                      child: Text(
-                        "Refer & Earn",
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const ThirdPage())));
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(left: 25),
+                        child: Text(
+                          "Refer & Earn",
+                        ),
                       ),
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(
-                        right: 25,
-                      ),
-                      child: GestureDetector(
+                      Padding(
+                        padding: const EdgeInsets.only(
+                          right: 25,
+                        ),
                         child: Image.asset("assets/images/settingsimage8.png"),
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                  builder: ((context) => const ThirdPage())));
-                        },
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
                 const Divider(
                   height: 20,
