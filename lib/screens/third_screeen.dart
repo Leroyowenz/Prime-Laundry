@@ -1,6 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import '../utility/custom_widget.dart';
+import '../utility/text_widget.dart';
 // import '../utility/settingsbox_widget.dart';
 
 class ThirdPage extends StatefulWidget {

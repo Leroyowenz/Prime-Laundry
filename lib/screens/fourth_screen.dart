@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:prime_laundry/utility/avatar_widget.dart';
+import 'package:prime_laundry/utility/textfield_widget.dart';
 
-import '../utility/custom_widget.dart';
+import '../utility/text_widget.dart';
 
 class FourthScreen extends StatefulWidget {
   const FourthScreen({super.key});
@@ -14,8 +16,8 @@ class _FourthScreenState extends State<FourthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: textInfo(
-            "Settings", FontWeight.w500, Colors.black, 18, "Roboto-Regular"),
+        title: textInfo("Change Password", FontWeight.w500, Colors.black, 18,
+            "Roboto-Regular"),
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.transparent,
@@ -23,6 +25,19 @@ class _FourthScreenState extends State<FourthScreen> {
           Icons.arrow_back,
           color: Colors.black,
         ),
+      ),
+      body: Column(
+        children: const [
+          //  Code for Avatar widget
+          SizedBox(
+            height: 20,
+          ),
+          AvatarWidget(),
+          SizedBox(
+            height: 20,
+          ),
+          TextFieldWidget()
+        ],
       ),
     );
   }
