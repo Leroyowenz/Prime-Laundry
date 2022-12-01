@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:prime_laundry/utility/avatar_widget.dart';
 import 'package:prime_laundry/utility/textfield_widget.dart';
-
-import '../utility/text_widget.dart';
+import 'package:prime_laundry/utility/bottomsheet_widget.dart';
+import '../../utility/text_widget.dart';
 
 class FourthScreen extends StatefulWidget {
   const FourthScreen({super.key});
@@ -15,15 +15,21 @@ class _FourthScreenState extends State<FourthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButton: const BottomSheetWidget(),
       appBar: AppBar(
         title: textInfo("Change Password", FontWeight.w500, Colors.black, 18,
             "Roboto-Regular"),
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
       ),
       body: Column(
@@ -34,7 +40,7 @@ class _FourthScreenState extends State<FourthScreen> {
           ),
           AvatarWidget(),
           SizedBox(
-            height: 20,
+            height: 30,
           ),
           TextFieldWidget()
         ],

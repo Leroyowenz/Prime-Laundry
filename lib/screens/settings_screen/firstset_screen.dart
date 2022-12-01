@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:prime_laundry/utility/avatar_widget.dart';
-import '../utility/indicator_widget.dart';
-import '../utility/text_widget.dart';
-import '../utility/settingsbox_widget.dart';
+import '../../utility/indicator_widget.dart';
+import '../../utility/text_widget.dart';
+import '../../utility/settingsbox_widget.dart';
 
 class FirstPage extends StatefulWidget {
   const FirstPage({super.key});
@@ -22,9 +22,14 @@ class _FirstPageState extends State<FirstPage> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
       ),
       body: SingleChildScrollView(

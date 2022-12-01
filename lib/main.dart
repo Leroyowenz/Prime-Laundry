@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:prime_laundry/screens/first_page.dart';
+
+import 'package:prime_laundry/onbording_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const FirstPage(),
+      home: const SplashScreen(),
     );
   }
 }

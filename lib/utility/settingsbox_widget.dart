@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:prime_laundry/screens/fourth_screen.dart';
-import 'package:prime_laundry/screens/third_screeen.dart';
+
+import 'package:prime_laundry/screens/settings_screen/thirdset_screeen.dart';
+
+import '../screens/settings_screen/fourthset_screen.dart';
 
 // First Settings Box
 

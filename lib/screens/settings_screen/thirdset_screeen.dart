@@ -1,6 +1,6 @@
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
-import '../utility/text_widget.dart';
+import '../../utility/text_widget.dart';
 // import '../utility/settingsbox_widget.dart';
 
 class ThirdPage extends StatefulWidget {
@@ -21,9 +21,14 @@ class _ThirdPageState extends State<ThirdPage> {
         elevation: 0,
         centerTitle: true,
         backgroundColor: Colors.transparent,
-        leading: const Icon(
-          Icons.arrow_back,
-          color: Colors.black,
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(context);
+          },
+          child: const Icon(
+            Icons.arrow_back,
+            color: Colors.black,
+          ),
         ),
       ),
       body: Column(
