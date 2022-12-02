@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:prime_laundry/screens/forgot_screen.dart';
+import 'package:prime_laundry/screens/entry_screen/forgot_screen.dart';
+import 'package:prime_laundry/screens/entry_screen/registers_screen.dart';
+import 'package:prime_laundry/screens/home_screens/homepaage_screen.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -86,7 +88,12 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 style: ElevatedButton.styleFrom(
                     backgroundColor: const Color(0xffCE1567),
                     padding: const EdgeInsets.fromLTRB(100, 20, 100, 20)),
-                onPressed: (() {}),
+                onPressed: (() {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const HomePage())));
+                }),
                 child: const Text("Login "),
               ),
               const SizedBox(
@@ -135,7 +142,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Navigator.push(
                         context,
                         MaterialPageRoute(
-                            builder: ((context) => const RegisterScreen())));
+                            builder: ((context) => const SignUpScreen())));
                   }),
                   child: const Text(
                     "Sign up now",

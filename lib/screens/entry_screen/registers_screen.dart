@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-import 'package:prime_laundry/screens/verification_acct.dart';
+import 'package:prime_laundry/screens/entry_screen/verification_acct.dart';
 
-class RegistersScreen extends StatefulWidget {
-  const RegistersScreen({super.key});
+class SignUpScreen extends StatefulWidget {
+  const SignUpScreen({super.key});
 
   @override
-  State<RegistersScreen> createState() => _RegistersScreenState();
+  State<SignUpScreen> createState() => _SignUpScreenState();
 }
 
-class _RegistersScreenState extends State<RegistersScreen> {
+class _SignUpScreenState extends State<SignUpScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

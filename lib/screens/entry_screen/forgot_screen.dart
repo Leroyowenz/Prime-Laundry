@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:prime_laundry/screens/verification_acct.dart';
-
-import 'momylaundry_screen.dart';
+import 'package:prime_laundry/screens/entry_screen/verification_acct.dart';
 
 class ForgotPassword extends StatefulWidget {
   const ForgotPassword({super.key});

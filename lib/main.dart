@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:prime_laundry/onbording_screen/splash_screen.dart';
+import 'package:prime_laundry/screens/onbording_screen/splash_screen.dart';
 
 void main() {
   runApp(const MyApp());
